@@ -4,7 +4,6 @@
 <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
 
 <style>
-/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; height: 100%;} canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #181717; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
 
 .middle {
 
@@ -45,6 +44,10 @@ color: grey;
     }
 }
 
+h2 {
+    font-size: 1.3em;
+}
+
 
 </style>
 
@@ -53,18 +56,21 @@ color: grey;
 
 
 <body>
-	<div class="middle">
+	<div>
 		<h1>Justin Taft</h1>
-        <h3>Application Security & Software Engineer</h3>
-		<div><a href="https://github.com/justintaft">github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">consulting services</a></div>
+		<p><a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
+    <pre>Just an unaverage hacker.
+  By day I hack companies large and small, through security consulting of course.
+    At night I'm usually skateboarding, creating music, or coding.
+    </pre>
     </div>	
+    <h3>Projects</h3>
+
+    <ul>
+        <li><a href="https://github.com/justintaft/yubikey-gpg-piv-provision">yubikey-gpg-piv-provision</a> -  Provisioning scripts for Yubikey GPG and PIV applications.</li> 
+    </ul>
     <div id="particles-js"></div> 
 
-<!-- particles.js container --> 
-<script src="particles.js"></script>
-<script>
-particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#404041"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":5,"random":true,"anim":{"enable":false,"speed":26.373626373626376,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#595959","opacity":0.4,"width":1},"move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":600,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
-</script>
 </body>
 </html>
 
