@@ -20,7 +20,7 @@
 
     <p>Sound familiar? Hopefully not! But if so, let's see how we can mitigate this from occurring.</p>
 
-    <p>At its core, we need a way to backup VMs which have an encrypted data store. VM Backups should occur behind the scenes, and downtown should be minimum (under a second at most). Additionally, we are aiming for crash consistency.  There are a few ways to achieve this, but this is one of the less complex methods in my opinion: <p>
+    <p>At its core, we need a way to backup VMs which have an encrypted data store. VM Backups should occur behind the scenes, and downtime should be minimum (under a second at most). Additionally, we are aiming for crash consistency.  There are a few ways to achieve this, but this is one of the less complex methods in my opinion: <p>
     <ul>
     <li>VMs should use two separate disk files. The first file is for storing root, boot, home,var, etc. The second file is just for swap. We don't back up the swap disk file  as it's highly volatile and not necessary. Our backups would grow quite large if we backed up swap every night.</li>
     <li>We use virsh's snapshot-create-as feature to create copy-on-write snapshots, and merge them back in with virsh blockcommit.</li>
