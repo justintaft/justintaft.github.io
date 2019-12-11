@@ -48,3 +48,8 @@ h2 {
 ul {
     list-style-type: square;
 }
+
+code {
+    font-family: monospace;
+    white-space: pre;
+}
