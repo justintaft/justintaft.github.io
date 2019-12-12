@@ -1,4 +1,5 @@
-### Encrypted VMs and Backups with KVM and Borg
+### Creating and backing up security sensitive VMs using KVM and Borg
+
 Nov 17, 2019
 
 It's Thursday night. You've been hacking away at a web app all week. All of a sudden your laptop turns off because you forgot to plug in the power cord. No bigge you think. You plug your laptop in, boot it up, and start the VM you've been using. *Crap*, you sigh to yourself, as you realize your proxy project file is corrupted. You start hunting for the bugs you've already discovered, muttering to yourself you should have had a backup plan in place.
@@ -15,7 +16,7 @@ At its core, we need a way to backup VMs which have an encrypted data store. VM 
 
 * We use sparse qcow2 files to allow disk files to grow when needed. This can lead to over-committing disk space, but it's a trade-off that allows you to re-use a template vm for easier provisioning. The backup process can also perform de-duplication for unused blocks, as they will appear as a bunch of zeros in sparse images.
     
-* To keep the hypervisor vanilla as possible, a  separate VM for backing up files  is used. The files to be backed up can be mounted as readonly within the backup VM.  Note as the VM files are encrypted, the risk of the backup VM accidentally backing up sensitive data is mitigated. For security however, the files will be wrapped with encryption. For additional security, the VM files can be signed before being exposed to the backup VM, in case the backup VM becomes compromised.
+* To keep the hypervisor vanilla as possible, a  separate VM for backing up files  is used. The files to be backed up can be mounted as readonly within the backup VM.  Note as the VM files are encrypted, the risk of the backup VM accidentally backing up sensitive data is mitigated. For additional security,  VM images can be signed, to verify they have not been tampered with.
 
 * If necessary, a script is run within the VM before the snapshot is taken to close applications which don't support crash-consistency. After the snapshot is made, the application is re-started. The script can be triggered through SSH for instance.
 
