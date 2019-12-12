@@ -23,7 +23,7 @@
 audit[26742]: AVC avc:  denied  { read } for  pid=26742 comm="worker" name="testvm.qcow2" dev="dm-6" ino=24642243 scontext=unconfined_u:unconfined_r:svirt_t:s0:c501,c650 tcontext=unconfined_u:object_r:user_home_t:s0 tclass=file permissive=0
 </code></p>
 
-<p>To allow a VM access to other VMs backing disks, you can apply a SELinux tag to the running qemu process allow access to all disks. To allow a VM named <code>backup</code> to have read and write access to other VM backing files, run <code>virsh editxml --domain backup</code> and insert the following before <code>&lt;/domain&gt;</code>:</p>
+<p>SELinux tags can be applied to the running qemu process for the VM to allow read and write access to all VM disks.  To allow a VM named <code>backup</code> to have read and write access to other VM backing files, run <code>virsh editxml --domain backup</code> and insert the following before <code>&lt;/domain&gt;</code>:</p>
 
 <p><code>
 &lt;seclabel type='static' model='selinux' relabel='yes'&gt;
@@ -31,7 +31,7 @@ audit[26742]: AVC avc:  denied  { read } for  pid=26742 comm="worker" name="test
 &lt;/seclabel&gt;
 </code></p>
 
-<p>Ideally, a custom SELinux policy should be created to allow read-only access to backing disks. However, mounting backing disk files as readonly within a VM through libvirt may be an acceptable  compromise on complexity and in-depth security for your scenario.</p>
+<p>Ideally, a custom SELinux policy should be created to allow read-only access to backing disks. However, mounting backing disk files as readonly within a VM through libvirt and leveraging user, groups, and file permissions to further enforce read-only access may be acceptable.</p>
 <h3>Encrypted VMs and Backups with KVM and Borg</h3>
 
 <p>Nov 17, 2019</p>
