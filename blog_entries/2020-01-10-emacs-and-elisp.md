@@ -9,9 +9,7 @@ Over the last 20 years I've used many  environments for programming and editing 
 
 **Emacs allows you to optimize your workflow** - I dislike having to switch between multiple applications, it's a waste of time. As Emacs is easy to extend, you can optimize your workflow so everything is a few keystrokes away. For projects, I manage my todo-list, program, run shell commands, and do technical writing all within Emacs. I even have grammar checking in Emacs thanks to integrating language tool.
 
-**Emacs allows you to program using keyboard macros** - Keyboard macros allows you save keystrokes/executed commands and run them later. This allows you to be really hacky and get things done quickly. Need a one-off program to save the current file, then execute a shell command? Write a macro. Need a one-off program to move the current line to a different buffer? Use a macro. Any one-off action you find repetitive and it's not worth writing elisp for, try writing a macro instead. The real ah-ha moment for me is when I realized you can run any function that's not bound to an active key, such as with *M-x function-name*. 
-
-Keep in mind other people don't use Emacs, so for project-related repetitive operations, they should be within a build script of some sort.
+**Emacs allows you to program using keyboard macros** - Keyboard macros allows you save keystrokes/executed commands and run them later. This allows you to be really hacky and get things done quickly. Need a one-off program to save the current file, then execute a shell command? Write a macro. Need a one-off program to move the current line to a different buffer? Use a macro. Any one-off action you find repetitive and it's not worth writing elisp for, try writing a macro instead. The real ah-ha moment for me is when I realized you can run any function that's not bound to an active key, such as with *M-x function-name*. Keep in mind other people don't use Emacs, so for project-related repetitive operations, they should be within a build script of some sort.
 
 Of course, there are downsides to using Emacs.
 
