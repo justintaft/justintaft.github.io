@@ -5,7 +5,7 @@ January 10th, 2020
 Over the last 20 years I've used many  environments for programming and editing files (vim, Emacs, Eclipse, NetBeans, PHPStorm, Visual Studio, just to name some). While I will use the right tool for the right job, I'm partial to Emacs.
 
 
-**Emacs is easy to extend** - You can modify Emacs while it's running, within Emacs. There is no need for a separate development environment. You write some elisp and then evaluate the expressions within Emacs. There is no need to set up a project for plugin development, and no need to learn a custom language with lots of syntax. I'm not a fan of vimscript, powershell, or scala for this reason, but i digress.
+**Emacs is easy to extend** - You can modify Emacs while it's running, within Emacs. There is no need for a separate development environment. You write some elisp and then evaluate the expressions within Emacs. There is no need to set up a project for plugin development, and no need to learn a custom language with lots of syntax. I'm not a fan of vimscript, powershell, or scala for this reason, but I digress.
 
 **Emacs allows you to optimize your workflow** - I dislike having to switch between multiple applications, it's a waste of time. As Emacs is easy to extend, you can optimize your workflow so everything is a few keystrokes away. For projects, I manage my todo-list, program, run shell commands, and do technical writing all within Emacs. I even have grammar checking in Emacs thanks to integrating language tool.
 
