@@ -16,7 +16,7 @@ Of course, there are downsides to using Emacs.
 
 **Learning Emacs takes time** - The way I think about Emacs is it's a programming environment for itself. Key bindings are merely shortcuts to invoking  elisp functions. When you write elisp, you will have to spend time learning it's core API. Emacs introspection helps though.
 
-**Configuring Emacs takes time** - You have to invest time to tweak Emacs the way you want it, and it's never perfect. You have to remind yourself to invest your time wisely to achieve your goals. Sometimes it's better not to modify Emacs so you can your real work done.
+**Configuring Emacs takes time** - You have to invest time to tweak Emacs the way you want it, and it's never perfect. You have to remind yourself to invest your time wisely to achieve your goals. Sometimes it's better not to modify Emacs so you can finish your real work.
 
 **Emacs is insecure** - Emacs allows the use of revoked certificates.  Additionally it's common to download packages from melpa/github to configure Emacs how you want it. As these packages are executed within Emacs, this can easily lead to malware being installed on your computer. Even worse, you essentially can't trust that what you see on the screen is actually is not is tampered with. For this reason, I review elisp which I use in my setups. Additionally, I sandbox Emacs in such a way where it would be hard for malware to exfiltrate data. 
 
