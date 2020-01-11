@@ -22,4 +22,4 @@ Of course, there are downsides to using Emacs.
 
 It would be great if there was a straight forward method to  access multiple compartmentalized Emacs instances from a trusted Emacs instance. This would be useful to restrict what compromised Emacs instances can access.
 
-Update on 2020-01-11: Reddit user *skeeto*  clarified Emacs was updated in 2016 to reject certificates which don't match the targeted host name being connected to (https://www.reddit.com/r/emacs/comments/en4bdb/on_emacs/fdvxhat?utm_source=share&utm_medium=web2x). Upon test, Emacs 26.3 still allows revoked certificates to be used.
+Update on 2020-01-11: Reddit user *skeeto* clarified Emacs was updated in 2016 to reject certificates which don't match the targeted host name being connected to (https://www.reddit.com/r/emacs/comments/en4bdb/on_emacs/fdvxhat?utm_source=share&utm_medium=web2x). Upon test,ing Emacs 26.3 still allows revoked certificates to be used.
