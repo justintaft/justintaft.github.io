@@ -2,38 +2,33 @@
 <html>
 <head>
 <title>Justin Taft</title>
-<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-<div>
-<h1>Justin Taft</h1>
-<p><a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
-<p>Just an unaverage hacker.</p>
-<p>By day I hack companies large and small, by their own requests of course.<br>At night I'm usually skateboarding, creating music, studying, or coding.</p>
-</div>
+	<div>
+		<h1>Justin Taft</h1>
+		<p><a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
+    <p>Just an unaverage hacker.</p>
+    <p>By day I hack companies large and small, by their own requests of course.<br>At night I'm usually skateboarding, creating music, studying, or coding.</p>
+    </div>	
 
-<a name="projects"></a>
-<h3>Projects</h3>
+    <a name="projects"></a>
+    <h3>Projects</h3>
 
-<ul>
-<li><a href="https://github.com/justintaft/yubikey-gpg-piv-provision">yubikey-gpg-piv-provision</a> -  Provisioning scripts for Yubikey GPG and PIV applications.</li>
-<li><a href="https://github.com/justintaft/kvm-encrypted-vm-management">kvm-encrypted-vm-management</a> - Manage Encrypted KVM VMs.</li>
-<li><a href="https://github.com/oneupsecurity/security-findings-templates">security-findings-templates</a> - Templates for disclosing security findings.</li>
-<li><a href="https://github.com/justintaft/org-clock-split">org-clock-split</a> - Split Emacs ORG clock entries into two.</li>
-</ul>
+    <ul>
+        <li><a href="https://github.com/justintaft/yubikey-gpg-piv-provision">yubikey-gpg-piv-provision</a> -  Provisioning scripts for Yubikey GPG and PIV applications.</li> 
+        <li><a href="https://github.com/justintaft/kvm-encrypted-vm-management">kvm-encrypted-vm-management</a> - Manage Encrypted KVM VMs.</li>
+        <li><a href="https://github.com/oneupsecurity/security-findings-templates">security-findings-templates</a> - Templates for disclosing security findings.</li>
+        <li><a href="https://github.com/justintaft/org-clock-split">org-clock-split</a> - Split Emacs ORG clock entries into two.</li>
+    </ul>
 
-<a name="blog"></a>
-<h3>Blog Posts</h3>
-<ul>
-<li><a href="blog/2020-01-10-emacs-and-elisp.html">On Emacs</h3></a></li>
-<li><a href="blog/2019-12-25-dot-net-deserilization-error-messages.html">.NET Deserilization Gadgets</h3></a></li>
-<li><a href="blog/2019-12-11-libvirt-mcs-selinux.html">Applying SELinux Tags To Allow Cross-VM Disk Access</h3></a></li>
-<li><a href="blog/2019-11-17-encrypted-vms-and-backups-with-kvm-and-borg.html">Creating and backing up security sensitive VMs using KVM and Borg</h3></a></li>
-</ul>
+    <a name="blog"></a>
+    <h3>Blog Posts</h3>
+     !!BlogLinks!!
 
-<h3>PGP Public Key</h3>
+    <h3>PGP Public Key</h3>
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 

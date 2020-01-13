@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Justin Taft</title>
+<base href="../">
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body class="blog">
+<div>
+<h1>Justin Taft</h1>
+<p>
+
+<a href="index.html">Home</a> / <a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
+</div>
+
+
+
+<h3>.NET Deserilization Gadgets</h3>
+
+<p>December 25, 2019</p>
+
+<p>The use of <code>BinaryFormatter</code> in .NET applications often leads to Remote Code Execution quite easily. See <a href="https://github.com/pwntester/ysoserial.net">https://github.com/pwntester/ysoserial.net</a> for example gadgets.</p>
+
+<p>When testing the TypeConfuseDelegate payload in your own project, a couple of exceptions may be thrown:</p>
+
+<ul>
+<li><p>'Object must implement IConvertible' - This occurs when the appropriate deserialization types can not be found. Check to ensure you are compiling with a .NET Framework project to instead of .NET Core.</p></li>
+<li><p>"System.IO.FileNotFoundException: 'Could not load file or assembly 'System' or one of its dependencies. The system cannot find the file specified.'" - An easy way to fix the runtime error for your Proof of Concept is by adding a <code>System</code> reference to the project, and setting <code>Copy Local</code> to <code>True</code>. This causes the <code>System.dll</code> file to copied to the build directory.</p></li>
+</ul>
+
+<p>Often developers try to re-mediate Deserialization bugs by whitelisting which types can be deserialized. In .NET applications, the <code>System</code> assembly gets whitelisted often. However, known remote code execution gadgets exist in <code>System</code>, and can be leveraged to gain remote code execution. </p>
+
+<p>A recommended fix is to use a Deserialization framework that doesn't allow arbitrary types to be deserialized, such as JSON. </p>
+
+Blog Posts:
+
+<ul>
+<li><a href="blog/2020-01-10-emacs-and-elisp.html">On Emacs</h3></a></li>
+<li><a href="blog/2019-12-25-dot-net-deserilization-error-messages.html">.NET Deserilization Gadgets</h3></a></li>
+<li><a href="blog/2019-12-11-libvirt-mcs-selinux.html">Applying SELinux Tags To Allow Cross-VM Disk Access</h3></a></li>
+<li><a href="blog/2019-11-17-encrypted-vms-and-backups-with-kvm-and-borg.html">Creating and backing up security sensitive VMs using KVM and Borg</h3></a></li>
+</ul>
+
+</body>
+</html>
+

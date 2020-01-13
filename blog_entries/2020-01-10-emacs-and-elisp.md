@@ -1,5 +1,5 @@
 
-### On Emacs 
+### On Emacs
 
 January 10th, 2020
 

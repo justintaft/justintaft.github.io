@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Justin Taft</title>
+<base href="../">
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body class="blog">
+<div>
+<h1>Justin Taft</h1>
+<p>
+
+<a href="index.html">Home</a> / <a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
+</div>
+
+
+
+<h3>Applying SELinux Tags To Allow Cross-VM Disk Access</h3>
+
+<p>December 11, 2019</p>
+
+<p>Fedora uses SELinux's Multi Category Security to restrict VMs from accessing other VMs backing disks. Each VM is assigned a randomized category number when starting. When accessing a VM disk file from another running VM, such as by sharing a directory, an error similar to the following is logged by systemd:</p>
+
+<p><code>
+audit[26742]: AVC avc:  denied  { read } for  pid=26742 comm="worker" name="testvm.qcow2" dev="dm-6" ino=24642243 scontext=unconfined_u:unconfined_r:svirt_t:s0:c501,c650 tcontext=unconfined_u:object_r:user_home_t:s0 tclass=file permissive=0
+</code></p>
+
+<p>SELinux tags can be applied to the running qemu process for the VM to allow read and write access to all VM disks.  To allow a VM named <code>backup</code> to have read and write access to other VM backing files, run <code>virsh editxml --domain backup</code> and insert the following before <code>&lt;/domain&gt;</code>:</p>
+
+<p><code>
+&lt;seclabel type='static' model='selinux' relabel='yes'&gt;
+  &lt;label&gt;unconfined_u:unconfined_r:svirt_t:s0:c0.c1023&lt;/label&gt;
+&lt;/seclabel&gt;
+</code></p>
+
+<p>Ideally, a custom SELinux policy should be created to allow read-only access to backing disks. However, mounting backing disk files as readonly within a VM through libvirt and leveraging user, groups, and file permissions to further enforce read-only access may be acceptable.</p>
+
+Blog Posts:
+
+<ul>
+<li><a href="blog/2020-01-10-emacs-and-elisp.html">On Emacs</h3></a></li>
+<li><a href="blog/2019-12-25-dot-net-deserilization-error-messages.html">.NET Deserilization Gadgets</h3></a></li>
+<li><a href="blog/2019-12-11-libvirt-mcs-selinux.html">Applying SELinux Tags To Allow Cross-VM Disk Access</h3></a></li>
+<li><a href="blog/2019-11-17-encrypted-vms-and-backups-with-kvm-and-borg.html">Creating and backing up security sensitive VMs using KVM and Borg</h3></a></li>
+</ul>
+
+</body>
+</html>
+

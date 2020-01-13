@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Justin Taft</title>
+<base href="../">
 <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -10,10 +11,17 @@
 	<div>
 		<h1>Justin Taft</h1>
 		<p>
+
         <a href="index.html">Home</a> / <a href="https://github.com/justintaft">Github</a> / <a href="https://www.linkedin.com/in/justin-taft/">LinkedIn</a> / <a href="https://www.oneupsecurity.com">Consulting Services</a></p>
     </div>	
 
+
+
 !!BlogEntries!!
+
+Blog Posts:
+
+!!BlogLinks!!
 
 </body>
 </html>
