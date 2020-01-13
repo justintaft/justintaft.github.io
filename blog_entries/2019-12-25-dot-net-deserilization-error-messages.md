@@ -2,7 +2,7 @@
 
 December 25, 2019
 
-The use of `BinaryFormatter` in .NET applications often leads to Remote Code Execution quite easily. See https://github.com/pwntester/ysoserial.net for example gadgets.
+The use of `BinaryFormatter` in .NET applications often leads to Remote Code Execution quite easily. See <https://github.com/pwntester/ysoserial.net> for example gadgets.
 
 When testing the TypeConfuseDelegate payload in your own project, a couple of exceptions may be thrown:
 
